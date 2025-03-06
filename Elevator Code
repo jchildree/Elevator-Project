@@ -1,0 +1,24 @@
+import sys
+
+def elevator_travel_time(start, floors):
+    travel_time_per_floor = 10  # seconds
+    current_floor = start
+    total_time = 0
+    visited_order = [current_floor]
+    
+    for floor in floors:
+        total_time += abs(floor - current_floor) * travel_time_per_floor
+        current_floor = floor
+        visited_order.append(current_floor)
+    
+    return total_time, visited_order
+
+if __name__ == "__main__":
+    if len(sys.argv) < 3:
+        print("Usage: python elevator.py <start_floor> <floor1,floor2,...>")
+        sys.exit(1)
+    
+    start_floor = int(sys.argv[1])
+    floors_to_visit = list(map(int, sys.argv[2].split(',')))
+    total_time, visited_order = elevator_travel_time(start_floor, floors_to_visit)
+    print(total_time, ','.join(map(str, visited_order)))
