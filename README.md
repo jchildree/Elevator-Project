@@ -1,7 +1,7 @@
 
 # Elevator Simulation
 
-This Python script simulates the travel time for an elevator as it moves through different floors. The program calculates the total travel time based on the number of floors the elevator visits and the time taken to travel between each floor. It also tracks the order of visited floors.
+This script simulates the travel time for an elevator as it moves through different floors, using Python. The program calculates the total elevator travel time based on the number of floors the elevator visits, and the time it takes to travel between each floor. This script also tracks the order of visited floors.
 
 ## Features:
 - Calculate total travel time based on the number of floors.
@@ -41,7 +41,7 @@ Example output:
 - Travels to floor 2 (10 seconds).
 - Then moves from floor 2 to floor 5 (30 seconds).
 - Finally, it moves from floor 5 to floor 8 (30 seconds).
-- The total travel time is 70 seconds.
+- The total travel time is 70 seconds (10 + 30 + 30, or (((New_Floor - Current_Floor) * 10) + (New_Floor - Current_Floor) * 10)+....).
 
 ## How it works:
 1. The script calculates the travel time based on the number of floors to be traveled to, and a fixed travel time of 10 seconds per floor.
