@@ -41,7 +41,7 @@ Example output:
 - Travels to floor 2 (10 seconds).
 - Then moves from floor 2 to floor 5 (30 seconds).
 - Finally, it moves from floor 5 to floor 8 (30 seconds).
-- The total travel time is 70 seconds (10 + 30 + 30, or (((New_Floor - Current_Floor) * 10) + (New_Floor - Current_Floor) * 10)+....).
+- The total travel time is 70 seconds (10 + 30 + 30 = 70, or (((New_Floor - Current_Floor) * 10) + (New_Floor - Current_Floor) * 10)+....).
 
 ## How it works:
 1. The script calculates the travel time based on the number of floors to be traveled to, and a fixed travel time of 10 seconds per floor.
@@ -50,7 +50,7 @@ Example output:
 
 ## Assumptions:
 - The elevator always moves directly from one floor to the next, without stopping until all entered floors are reached.
-- Assumes each floor is after the other, with no skipped floor between them.
+- Assumes each floor is after the other, with no skipped floors expected between them (e.g., 1, 2, 3, 4; not 1, 4, 6, 9).
 - The time to travel between any two floors is set to a fixed 10 seconds.
 
 ## Example:
