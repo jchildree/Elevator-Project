@@ -33,15 +33,15 @@ The script will output the total travel time in seconds and the order of floors 
 
 Example output:
 ```
-50 1,2,5,8
+70 1,2,5,8
 ```
 
 ### Example Explanation:
 - The elevator starts at floor 1.
 - Travels to floor 2 (10 seconds).
 - Then moves from floor 2 to floor 5 (30 seconds).
-- Finally, it moves from floor 5 to floor 8 (10 seconds).
-- The total travel time is 50 seconds.
+- Finally, it moves from floor 5 to floor 8 (30 seconds).
+- The total travel time is 70 seconds.
 
 ## How it works:
 1. The script calculates the travel time based on the number of floors to be traveled to, and a fixed travel time of 10 seconds per floor.
@@ -50,7 +50,7 @@ Example output:
 
 ## Assumptions:
 - The elevator always moves directly from one floor to the next, without stopping until all entered floors are reached.
-- Assumes each floor is after the other, with no skipped floors (Floors: 1, 2,3, 4 = Floors: 1, 4, 8, 2).
+- Assumes each floor is after the other, with no skipped floor between them.
 - The time to travel between any two floors is set to a fixed 10 seconds.
 
 ## Example:
